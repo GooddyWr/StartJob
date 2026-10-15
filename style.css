@@ -1,0 +1,106 @@
+
+/* ЦВЕТА (палитра для Figma): основной #7C3AED, тёмный #1E1038, светлый фон #F6F2FF, акцент #E879F9, белый #FFFFFF */
+/* ШРИФТ: Inter. РАДИУСЫ: карточки 24px, кнопки 999px. ШИРИНА КОНТЕНТА: 1200px (десктоп 1440, мобильный 390) */
+:root{--main:#7C3AED;--dark:#1E1038;--bg:#F6F2FF;--acc:#E879F9;--white:#fff;--text:#1E1038;--grey:#6B6384;--line:#E4DBFA}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:80px 0}
+h1{font-size:64px;line-height:1.05;margin:0 0 20px;letter-spacing:-1px}
+h2{font-size:40px;line-height:1.1;margin:0 0 12px}
+h3{font-size:20px;margin:0 0 8px}
+p{margin:0;color:var(--grey)}
+.btn{border:0;cursor:pointer;font:600 16px Inter,Arial,sans-serif;padding:14px 28px;border-radius:999px;background:var(--main);color:#fff}
+.btn:hover{background:#6422d6}
+.btn.light{background:#fff;color:var(--main);border:1px solid var(--line)}
+.btn.small{padding:10px 20px;font-size:14px}
+
+/* 1. ШАПКА */
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-weight:800;font-size:24px;color:var(--dark)}.logo b{color:var(--main)}
+nav{display:flex;gap:28px}nav a{color:var(--grey);text-decoration:none;font-size:15px}nav a:hover{color:var(--main)}
+
+/* 2. ГЛАВНЫЙ ЭКРАН */
+.hero{background:var(--dark);color:#fff;text-align:center;padding:110px 0}
+.hero h1 span{color:var(--acc)}
+.hero p{color:#CFC4EE;font-size:20px;max-width:560px;margin:0 auto 32px}
+.hero .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* 3. КАК ЭТО РАБОТАЕТ — 3 шага */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+.step{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px}
+.step i{display:flex;width:44px;height:44px;border-radius:50%;background:var(--main);color:#fff;font-style:normal;font-weight:700;align-items:center;justify-content:center;margin-bottom:16px}
+
+/* 4. ВОЗМОЖНОСТИ — bento-сетка 4 колонки */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+.tile{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;min-height:190px;display:flex;flex-direction:column;justify-content:flex-end}
+.tile.w2{grid-column:span 2}
+.tile.big{background:var(--main);border:0;grid-row:span 2;grid-column:span 2}
+.tile.big h3,.tile.big p{color:#fff}.tile.big .num{font-size:96px;font-weight:800;color:#fff;line-height:1;margin-bottom:auto}
+.tile .ico{font-size:36px;margin-bottom:auto}
+
+/* 5. КАТАЛОГ ВАКАНСИЙ */
+.tools{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 16px}
+.tools input,.tools select{padding:14px 20px;border-radius:999px;border:1px solid var(--line);background:#fff;font:16px Inter,Arial,sans-serif;outline:none}
+.tools input{flex:1 1 280px}.tools input:focus,.tools select:focus{border-color:var(--main)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 18px;cursor:pointer;font:14px Inter,Arial,sans-serif}
+.chip.on{background:var(--main);border-color:var(--main);color:#fff}
+.list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.card .co{color:var(--grey);font-size:14px}.card h3{margin:0}
+.tags{display:flex;gap:6px;flex-wrap:wrap}.tags span{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--bg);color:var(--main)}
+.pay{font-weight:700}
+.card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px}
+.fav{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:18px;cursor:pointer;color:var(--grey)}
+.fav.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.empty{grid-column:1/-1;text-align:center;padding:40px;color:var(--grey)}
+
+/* 6. ПРИЗЫВ К ДЕЙСТВИЮ */
+.cta{background:var(--main);border-radius:32px;color:#fff;text-align:center;padding:64px 24px}
+.cta p{color:#E6DBFF;margin:0 auto 24px;max-width:480px}
+.cta form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.cta input{padding:14px 22px;border-radius:999px;border:0;min-width:260px;font:16px Inter,Arial,sans-serif;outline:none}
+.cta .btn{background:var(--dark)}
+
+/* 7. ПОДВАЛ */
+footer{padding:32px 0;text-align:center;color:var(--grey);font-size:14px}
+
+/* МОДАЛЬНОЕ ОКНО ОТКЛИКА */
+.ov{position:fixed;inset:0;background:rgba(30,16,56,.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.ov.on{display:flex}
+.modal{background:#fff;border-radius:24px;padding:32px;width:100%;max-width:420px}
+.modal input{width:100%;padding:14px 18px;margin-bottom:10px;border:1px solid var(--line);border-radius:16px;font:16px Inter,Arial,sans-serif;outline:none}
+.modal .row{display:flex;gap:8px}.modal .btn{flex:1}
+.err{color:#d6246e;font-size:13px;min-height:18px;margin-bottom:8px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--dark);color:#fff;padding:14px 24px;border-radius:999px;display:none;z-index:60}
+
+/* МОБИЛЬНАЯ ВЕРСИЯ */
+@media(max-width:900px){
+ h1{font-size:40px}h2{font-size:30px}section{padding:56px 0}
+ nav{display:none}.hero{padding:70px 0}
+ .steps{grid-template-columns:1fr}
+ .bento{grid-template-columns:1fr 1fr}.tile.big{grid-row:auto}
+ .list{grid-template-columns:1fr}
+}
+@media(max-width:520px){.bento{grid-template-columns:1fr}.tile.w2,.tile.big{grid-column:auto}}
+
+/* ДОПОЛНЕНИЯ ДЛЯ МНОГОСТРАНИЧНОГО САЙТА */
+nav a.act{color:var(--main);font-weight:600}
+.logo{text-decoration:none}
+.page-head{background:var(--dark);color:#fff;text-align:center;padding:72px 0}
+.page-head h1{font-size:48px}.page-head p{color:#CFC4EE;font-size:18px;max-width:560px;margin:0 auto}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+.box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px}
+.box form{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.box input,.box textarea{width:100%;padding:14px 18px;border:1px solid var(--line);border-radius:16px;font:16px Inter,Arial,sans-serif;outline:none}
+.box input:focus,.box textarea:focus{border-color:var(--main)}
+details{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 24px;margin-top:12px}
+summary{cursor:pointer;font-weight:600}details p{margin-top:10px}
+footer a{color:var(--main);text-decoration:none;margin:0 8px}
+@media(max-width:900px){
+ header .wrap{flex-wrap:wrap;height:auto;padding-top:12px;padding-bottom:12px;gap:8px}
+ nav{display:flex;order:3;width:100%;overflow-x:auto;gap:20px;white-space:nowrap}
+ .page-head h1{font-size:34px}.grid2{grid-template-columns:1fr}
+}
